@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import AppRouter from 'components/Router';
-import { authService } from 'fbase';
-import firebase from 'fbase';
+import React, { useState, useEffect } from "react";
+import AppRouter from "components/Router";
+import { authService } from "fbase";
+
 function App() {
   const [init, setInit] = useState(false);
   const [userObj, setUserObj] = useState(null);
@@ -13,7 +13,7 @@ function App() {
           uid: user.uid,
           updateProfile: (args) => user.updateProfile(args),
         });
-      } else{
+      } else {
         setUserObj(null);
       }
       setInit(true);
@@ -36,7 +36,7 @@ function App() {
           userObj={userObj}
         />
       ) : (
-        'Initializing...'
+        "Initializing..."
       )}
     </>
   );
